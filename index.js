@@ -17,9 +17,9 @@ app.use(express.json());
 app.use("/user", userRouter)
 // app.use(authenticator)
 app.use("/ip", ipRouter)
-// app.get("/", async(req,res)=>{
-//     res.send("Hello");
-// })
+app.get("/", async(req,res)=>{
+    res.send({"user/register":"Registering new User", "user/login": "Loging in", "user/logout":"Loging out", "ip/ <ip_Address> /city":"Get City"});
+})
 
 
 const PORT = process.env.PORT || 8012;
